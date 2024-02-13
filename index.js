@@ -311,6 +311,8 @@ function convertImageToKindleCompatiblePngAsync(
       .level(pageConfig.blackLevel, pageConfig.whiteLevel)
       .bitdepth(pageConfig.grayscaleDepth)
       .quality(100)
+      .monochrome()                
+      .crop(480,800,60,105)
       .write(outputPath, (err) => {
         if (err) {
           reject(err);
